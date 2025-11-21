@@ -1,34 +1,36 @@
-# NaIisjsnwbot – BotAJS Telegram Bot
+# Bot – BotAJS Whatsapp Bot
 
-This is a Telegram bot built with **BotAJS** – a modern, cross-platform bot framework that supports Telegram, WhatsApp, Discord, and more.
+This is a Whatsapp bot built with **BotAJS** – a modern, cross-platform bot framework that supports Telegram, WhatsApp, Discord, and more.
 
 You can import this repository directly into your BotAJS project or use it as a reference.
 
 ## Bot Information
 
-- **Bot Username:** @Bsnaiodidebot
-- **Platform:** Telegram
+- **Phone Number ID:** WhatsAppBot_TEpw0
+- **Platform:** Whatsapp
 - **Language:** JAVASCRIPT
-- **Bot ID:** `7R9gV5qJuA`
-- **Created:** 2025-11-18T15:59:12.000000Z
-- **Last Updated:** 2025-11-21T04:11:58.000000Z
+- **Bot ID:** `kZDOQFtjmv`
+- **Created:** 2025-11-18T20:39:14.000000Z
+- **Last Updated:** 2025-11-20T14:12:08.000000Z
 
 **Documentation:** https://jobianss-organization.gitbook.io/bota-documentation
 
 ## Available Commands
 
-This bot includes 2 command(s):
+This bot includes 3 command(s):
 
-- **`/fuck i`**
-- **`/start`**
+- **`start`**
+- **`*`**
+- **`hii`**
 
 ## Project Structure
 
 ```
 .
 ├── commands/
-│   ├── _fuck i.js
-│   ├── _start.js
+│   ├── start.js
+│   ├── default.js
+│   ├── hii.js
 ├── bot.json          # Bot metadata
 └── README.md         # This file
 ```
@@ -57,21 +59,13 @@ This bot includes 2 command(s):
 await ctx.reply(`Hello ${ctx.from.first_name}! 👋`);
 ```
 
-### Telegram Shortcuts
-```javascript
-// Using ctx.bot (TelegramBot instance)
-await ctx.bot.sendMessage(ctx.chat.id, "Quick message!");
-```
-
-### Inline Keyboards
+### WhatsApp Buttons
 ```javascript
 await ctx.reply("Choose an option:", {
-  reply_markup: {
-    inline_keyboard: [
-      [{ text: "Button 1", callback_data: "btn1" }],
-      [{ text: "Visit Site", url: "https://botajs.top" }]
-    ]
-  }
+  buttons: [
+    { id: "btn1", title: "Option 1" },
+    { id: "btn2", title: "Option 2" }
+  ]
 });
 ```
 
@@ -80,7 +74,7 @@ await ctx.reply("Choose an option:", {
 - **BotAJS Documentation:** https://jobianss-organization.gitbook.io/bota-documentation
 - **Dashboard:** https://app.botajs.top
 - **API Reference:** https://jobianss-organization.gitbook.io/bota-documentation/api-reference
-- **Telegram Bot API:** https://core.telegram.org/bots/api
+- **WhatsApp Business API:** https://developers.facebook.com/docs/whatsapp
 
 ## Deploy
 
